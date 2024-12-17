@@ -1,0 +1,93 @@
+public class WebDriverMethodsType{
+
+WebDriver driver = new ChromeDriver();
+
+public void launchUrl(String url){
+driver.get(url); // It will return nothing
+}
+public String pageSource(){
+return driver.getPageSource();
+}
+public String title(){
+return driver.getTitle();
+}
+public String currentUrl(){
+return driver.getCurrentUrl();
+}
+public String singleWindowHandle(){
+return driver.getWindowHandle();
+}
+public Set<String> / String multipleWindowHandles(){ // doubt: can we have get return both the set & string either any one(set)?
+Set<String> multipleId = driver.getWindowHandles();
+for (String sid = multipleId){
+System.out.println("Single ID : "+sid);
+return sid;
+}
+public WebElement findSingleElement(By locator){
+return driver.findElement(locator);
+}
+public List<WebElements>/WebElement findMultipleElements(By locator){
+List<WebElement> elements = driver.findElements(locator);
+for (WebElement element : elements){
+System.out.println("Get Each Element : "+element);
+return element;
+}
+}
+public void closeBrowser(){
+driver.close(); // It will return nothing
+}
+public void quitBrowser(){
+driver.quit(); // It will return nothing
+}
+public void deleteCookies(){
+driver.manage().deleteAllCookies(); // It will return nothing
+}
+public void implicitlyWaiting(){
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // return type timeouts
+}
+public void pageLoadingTimeout(){
+driver.manage().timeouts().pageLoadTimeouts(Duration.ofSeconds(10)); // return type timeouts
+}
+public void maximizeTheWindow(){
+driver.manage().window().maximize();
+}
+public void minimizeTheWindow(){
+driver.manage().window().minimize();
+}
+public String navigatingTo(String url){
+return driver.navigate().to(url);
+}
+public void navigatingForward(){
+driver.navigate().forward();
+}
+public void navigatingBackward(){
+driver.navigate().back();
+}
+public void navigatingRefresh(){
+driver.navigate().refresh();
+}
+public void switchToTheWindow(String url){
+driver.switchTo().window(url); // can we pass the argument for window type like whether it is a tab, window or url?
+}
+public void switchToTabWindow(){
+driver.switchTo().newWindow(WindowType.TAB); // return type WebDriver
+}
+public void switchToWindowType(){
+driver.switchTo().newWindowindow(WindowType.WINDOW); // return type WebDriver
+}
+public alert switchingToAlert(WebElement element){
+return driver.switchTo().alert(); // return type WebDriver
+
+}
+public void switchingToTheFrame(int index){
+driver.switchTo().frame(index); // return type WebDriver
+}
+public void switchingToTheParentFrame(){
+driver.switchTo().parentFrame(); // return type WebDriver
+}
+public void switchingToDefaultContent(){
+driver.switchTo().defaultContent(); // return type WebDriver
+}
+}
+
+// converting all these methods in switch case is complecated?

@@ -23,12 +23,13 @@ public class ActionsClass {
 	 * 
 	 * Actions : Mouse Actions in Selenium:
 	 * 
-	 * 1. click() : performs click action 3 2. doubleClick(): Performs double click
-	 * onthe element 3. clickAndHold():Performs long click on the mouse without
-	 * releasing it 4. dragAndDrop(): Drags the element from one point and drops to
-	 * another 5. moveToElement(): Shifts the mouse pointer to the center of the
-	 * element 6. contextClick(): To Perform right-click on the mouse 7.
-	 * ScrollToElement() : To perform scrolling functions but not recommended
+	 * 1. click() : performs click action. 
+	 * 2. doubleClick(): Performs double click onthe element. 
+	 * 3. clickAndHold():Performs long click on the mouse without releasing it. 
+	 * 4. dragAndDrop(): Drags the element from one point and drops to another. 
+	 * 5. moveToElement(): Shifts the mouse pointer to the center of the element. 
+	 * 6. contextClick(): To Perform right-click on the mouse 
+	 * 7. ScrollToElement() : To perform scrolling functions but not recommended
 	 * 
 	 * 
 	 * 
